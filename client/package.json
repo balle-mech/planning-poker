@@ -1,0 +1,32 @@
+{
+  "name": "sample-planning-poker",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "bash ./../script/forward_local_to_ec2.sh --profile dtd-aws-training --from 3000 --to 80 --instance-id i-0c65f13a816191e64 &",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "test:unit-coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@vitest/coverage-v8": "^1.4.0",
+    "axios": "^1.6.8",
+    "vue": "^3.4.21",
+    "vue-axios": "^3.5.2",
+    "vue-router": "^4.3.0",
+    "vuetify": "^3.6.0-alpha.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/test-utils": "^2.4.5",
+    "jsdom": "^24.0.0",
+    "vite": "^5.1.6",
+    "vitest": "^1.4.0"
+  }
+}
